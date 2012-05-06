@@ -73,6 +73,6 @@ hash.each do |k,v|
 end
 
 puts "\n\tThe answer is: #{product}"
-puts "\n\tThis script took approximately #{(Time.now-t).round(9)} seconds to complete."
+puts "\n\tThis script took approximately #{(Time.now-t).round(3)} seconds to complete."
 
 # ^^ This takes ~0.001 seconds
