@@ -12,7 +12,7 @@ a = 600851475143
 b = 1
 c = []
 
-while b <= Math.sqrt(a)
+while b <= a/2
 	
 	b += 1
 	
