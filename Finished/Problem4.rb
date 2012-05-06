@@ -18,8 +18,8 @@ end
 a = 100..999
 b = 0
 
-	(i..999).each do |j|
 a.each do |i|
+	(i..999).each do |j|
 		c = i*j
 		# Hold the new product in b if it is bigger than the old product and it is a palindrome
 		b = c if c > b && c.is_pal?
