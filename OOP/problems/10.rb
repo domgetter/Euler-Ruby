@@ -11,13 +11,7 @@
 load File.dirname(__FILE__) + '/../header.rb'
 load File.dirname(__FILE__) + '/../func.rb'
 
-list = get_primes(2000000)
-sum = 0
-list.each do |i|
-
-  sum += i
-
-end
+sum = get_primes(2000000).inject(:+)
 
 @answer = sum
 

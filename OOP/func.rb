@@ -1,5 +1,16 @@
 class Integer
 
+  def triangle
+  
+    sum = 0
+    1.upto(self) do |i|
+      sum += i
+    end
+    
+    sum
+    
+  end
+
 	def is_pal?
   # Returns Boolean
   # Checks to see if a positive integer is read the same forward and backaward
