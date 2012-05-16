@@ -2,12 +2,7 @@ class Integer
 
   def triangle
   
-    sum = 0
-    1.upto(self) do |i|
-      sum += i
-    end
-    
-    sum
+    self*(self+1)/2
     
   end
 
