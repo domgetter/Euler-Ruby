@@ -1,9 +1,50 @@
 class Integer
 
+  def !
+  
+    product = 1
+    
+    1.upto(self) do |i|
+    
+      product *= i
+    
+    end
+    
+    product
+  
+  end
+
+  def choose(k)
+  
+    n = self
+    num = n.!/((k.!)*((n-k).!)) #/ # for k <= n, zero otherwise
+  
+    return num
+  
+  end
+
   def triangle
   
     self*(self+1)/2
     
+  end
+  
+  def collatz
+  # returns an array of the sequence described in the Collatz Problem
+    num = self
+    array = [num]
+    
+    until num == 1
+      if num%2==0
+        num /= 2
+      else
+        num = 3*num+1
+      end
+      array << num
+    end
+    
+    array
+  
   end
 
 	def is_pal?
