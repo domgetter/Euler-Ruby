@@ -142,38 +142,70 @@ end
 
 def get_primes(a,b=true)
 # Returns Array
-# Generates all the prime numbers up to the number in question
+# Generates all the prime numbers up to the number in question (inclusive)
 # If second arg is false, then it generates the number of prime numbers you specified
 # Returns an array of the prime numbers
 # ex. get_primes(10)		 => [2,3,5,7]
 #	get_primes(10, false)  => [2,3,5,7,11,13,17,19,23,29]
 
 		list_of_primes = [2]
-		2.upto(a) do |current_number|
-			
-			primeness = true
-		
-			# check if divisible by any member in the array, then add to array if exhausted
-			# if it is divisible at any time, break, and check the next number.
-			
-			list_of_primes.each do |current_known_prime|
-			
-				if current_number%current_known_prime == 0
-					primeness = false
-					break
-				end
-				
-				if current_known_prime>Math.sqrt(current_number)
-				
-					break
-				end
-				
-			
-			end
-			
-			if (primeness)
-			list_of_primes << current_number
-			end
-		end
+    if b
+      2.upto(a) do |current_number|
+        
+        primeness = true
+      
+        # check if divisible by any member in the array, then add to array if exhausted
+        # if it is divisible at any time, break, and check the next number.
+        
+        list_of_primes.each do |current_known_prime|
+        
+          if current_number%current_known_prime == 0
+            primeness = false
+            break
+          end
+          
+          if current_known_prime>Math.sqrt(current_number)
+          
+            break
+          end
+          
+        
+        end
+        
+        if (primeness)
+        list_of_primes << current_number
+        end
+      end
+    else
+      #2.upto(a) do |current_number|
+      current_number = 2
+      while list_of_primes.length < a
+        
+        primeness = true
+      
+        # check if divisible by any member in the array, then add to array if exhausted
+        # if it is divisible at any time, break, and check the next number.
+        
+        list_of_primes.each do |current_known_prime|
+        
+          if current_number%current_known_prime == 0
+            primeness = false
+            break
+          end
+          
+          if current_known_prime>Math.sqrt(current_number)
+          
+            break
+          end
+          
+        
+        end
+        
+        if (primeness)
+        list_of_primes << current_number
+        end
+        current_number += 1
+      end
+    end
 		list_of_primes
 	end
