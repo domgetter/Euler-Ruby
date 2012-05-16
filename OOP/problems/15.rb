@@ -7,23 +7,6 @@
 load File.dirname(__FILE__) + '/../header.rb'
 load File.dirname(__FILE__) + '/../func.rb'
 
-n = 20
-@answer = (2*n).choose(n)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@answer = (40).choose(20)
 
 load File.dirname(__FILE__) + '/../footer.rb'
